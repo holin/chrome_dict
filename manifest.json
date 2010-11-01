@@ -1,0 +1,22 @@
+{
+   "background_page": "background.html",
+   "browser_action": {
+      "default_icon": "icon_dict.gif",
+      "popup": "options.html"
+   },
+   "content_scripts": [ {
+      "js": [ "options.js", "lookup.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "description": "\u652F\u6301Chrome\u6D4F\u89C8\u5668\u7684\u5212\u8BCD\u7FFB\u8BD1",
+   "icons": {
+      "128": "icon-128.png",
+      "64": "icon.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDNfmwkcubNM4WFRsykuHp4I/pbmMMvSx4eLHaaE/ZM/jtEjaF+vBuQymrZHaXrLGtS/aqI75l98VTl5rhWWzqgKUsxLMoVflrLvZv0sjlJaPZ1T9B4jH28M7FZY2D1CT6sPntjqIYwJDt29NuwdU+lozVEJKc9R9SQUlf/GQ08GQIDAQAB",
+   "name": "\u6709\u9053\u8BCD\u5178Chrome\u5212\u8BCD\u63D2\u4EF6",
+   "options_page": "options.html",
+   "permissions": [ "http://*/*", "https://*/*" ],
+   "update_url": "http://cidian.youdao.com/chromeplus/update.xml",
+   "version": "1.0"
+}
