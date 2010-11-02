@@ -74,7 +74,7 @@ function isContainJapanese(temp)
 }
 var langType = '';
 function translateXML(xmlnode){
-	var translate = "<strong>²éÑ¯:</strong><br/>";
+	var translate = "<strong>æŸ¥è¯¢:</strong><br/>";
 	var root = xmlnode.getElementsByTagName("yodaodict")[0];
 	
 	if ("" + root.getElementsByTagName("return-phrase")[0].childNodes[0] != "undefined") 
@@ -107,18 +107,18 @@ function translateXML(xmlnode){
 	
 	
 	if (noBaseTrans == false) {
-		translate += retphrase + "<br/><br/><strong>»ù±¾ÊÍÒå:</strong><br/>";
+		translate += retphrase + "<br/><br/><strong>åŸºæœ¬é‡Šä¹‰:</strong><br/>";
 		
 		if ("" + root.getElementsByTagName("translation")[0].childNodes[0] != "undefined") 
 			var translations = root.getElementsByTagName("translation");
 		else {
-			basetrans += 'Î´ÕÒµ½»ù±¾ÊÍÒå';
+			basetrans += 'æœªæ‰¾åˆ°åŸºæœ¬é‡Šä¹‰';
 		}
 		
 		for (var i = 0; i < translations.length; i++) {
 			var line = translations[i].getElementsByTagName("content")[0].childNodes[0].nodeValue + "<br/>";
 			if (line.length > 50) {
-				var reg = /[;£»]/;
+				var reg = /[;ï¼›]/;
 				var childs = line.split(reg);
 				line = '';
 				for (var i = 0; i < childs.length; i++) 
@@ -132,7 +132,7 @@ function translateXML(xmlnode){
 		if ("" + root.getElementsByTagName("web-translation")[0].childNodes[0] != "undefined") 
 			var webtranslations = root.getElementsByTagName("web-translation");
 		else {
-			webtrans += 'Î´ÕÒµ½ÍøÂçÊÍÒå';
+			webtrans += 'æœªæ‰¾åˆ°ç½‘ç»œé‡Šä¹‰';
 		}
 		
 		for (var i = 0; i < webtranslations.length; i++) {
@@ -189,26 +189,26 @@ function mainFrameQuery(){
 	res.innerHTML = '';
 	if (noBaseTrans == false) {
 		if(langType=='ko')
-			basetrans = "<strong>º«ºº·­Òë:</strong><br/>" + basetrans;
+			basetrans = "<strong>éŸ©æ±‰ç¿»è¯‘:</strong><br/>" + basetrans;
 		else if (langType == 'jap')
-			basetrans = "<strong>ÈÕºº·­Òë:</strong><br/>" + basetrans;
+			basetrans = "<strong>æ—¥æ±‰ç¿»è¯‘:</strong><br/>" + basetrans;
 		else if (langType == 'fr')
-			basetrans = "<strong>·¨ºº·­Òë:</strong><br/>" + basetrans;
-		else basetrans = "<strong>Ó¢ºº·­Òë:</strong><br/>" + basetrans;
+			basetrans = "<strong>æ³•æ±‰ç¿»è¯‘:</strong><br/>" + basetrans;
+		else basetrans = "<strong>è‹±æ±‰ç¿»è¯‘:</strong><br/>" + basetrans;
     	res.innerHTML = basetrans;
 	}
 	if (noWebTrans == false) {
-		webtrans = "<strong>ÍøÂçÊÍÒå:</strong><br/>" + webtrans;
+		webtrans = "<strong>ç½‘ç»œé‡Šä¹‰:</strong><br/>" + webtrans;
 		res.innerHTML += webtrans;
 	}
 	if(noBaseTrans == false || noWebTrans == false)
 	{
-		res.innerHTML +="<a href ='http://dict.youdao.com/search?q="+encodeURIComponent(_word)+"&ue=utf8&keyfrom=chrome.extension"+lan+"' target=_blank>µã»÷ ²é¿´ÏêÏ¸ÊÍÒå</a>";
+		res.innerHTML +="<a href ='http://dict.youdao.com/search?q="+encodeURIComponent(_word)+"&ue=utf8&keyfrom=chrome.extension"+lan+"' target=_blank>ç‚¹å‡» æŸ¥çœ‹è¯¦ç»†é‡Šä¹‰</a>";
 	}
 	if(noBaseTrans && noWebTrans)
 	{
-		res.innerHTML = "Î´ÕÒµ½Ó¢ºº·­Òë!";
-		res.innerHTML +="<br><a href ='http://www.youdao.com/search?q="+encodeURIComponent(_word)+"&ue=utf8&keyfrom=chrome.extension' target=_blank>³¢ÊÔÓÃÓĞµÀËÑË÷</a>";
+		res.innerHTML = "æœªæ‰¾åˆ°è‹±æ±‰ç¿»è¯‘!";
+		res.innerHTML +="<br><a href ='http://www.youdao.com/search?q="+encodeURIComponent(_word)+"&ue=utf8&keyfrom=chrome.extension' target=_blank>å°è¯•ç”¨æœ‰é“æœç´¢</a>";
 	}
 	retphrase='';
 	webtrans = '';
