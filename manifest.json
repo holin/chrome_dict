@@ -13,10 +13,8 @@
       "128": "icon-128.png",
       "64": "icon.png"
    },
-   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDNfmwkcubNM4WFRsykuHp4I/pbmMMvSx4eLHaaE/ZM/jtEjaF+vBuQymrZHaXrLGtS/aqI75l98VTl5rhWWzqgKUsxLMoVflrLvZv0sjlJaPZ1T9B4jH28M7FZY2D1CT6sPntjqIYwJDt29NuwdU+lozVEJKc9R9SQUlf/GQ08GQIDAQAB",
    "name": "\u6709\u9053\u8BCD\u5178Chrome\u5212\u8BCD\u63D2\u4EF6",
    "options_page": "options.html",
    "permissions": [ "http://*/*", "https://*/*" ],
-   "update_url": "http://cidian.youdao.com/chromeplus/update.xml",
    "version": "1.0"
 }

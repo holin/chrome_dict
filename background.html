@@ -1,5 +1,5 @@
 <html> 
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
 <head> 
 <script type="text/javascript" src="options.js"> 
 </script> 
@@ -206,17 +206,17 @@ function genTable(word,strpho, baseTrans, webTrans)
 		encodeURIComponent(word) +
 		'&keyfrom=chrome.extension' +
 		lan +
-		'" title="查看完整释义" class="ydd-sp ydd-icon" style="padding:0px 0px 0px 0px;padding-top:17px;" target=_blank></a> <a href="http://dict.youdao.com/search?q=' +
+		'" title="鏌ョ湅瀹屾暣閲婁箟" class="ydd-sp ydd-icon" style="padding:0px 0px 0px 0px;padding-top:17px;" target=_blank></a> <a href="http://dict.youdao.com/search?q=' +
 		encodeURIComponent(word) +
 		'&keyfrom=chrome.extension' +
 		lan +
-		'" target=_blank title="查看完整释义" id="yddKeyTitle">' +
+		'" target=_blank title="鏌ョ湅瀹屾暣閲婁箟" id="yddKeyTitle">' +
 		title +
 		'</a>&nbsp;<span style="font-weight:normal;font-size:10px;">' +
 		strpho +
 		'</span><span style="float:right;font-weight:normal;font-size:10px"><a href="http://www.youdao.com/search?q=' +
 		encodeURIComponent(word) +
-		'&ue=utf8&keyfrom=chrome.extension" target=_blank>详细</a></span><a id="test"><span class="ydd-sp ydd-close">X</span></a></div></div>' +
+		'&ue=utf8&keyfrom=chrome.extension" target=_blank>璇︾粏</a></span><a id="test"><span class="ydd-sp ydd-close">X</span></a></div></div>' +
 		'    <div id="yddMiddle">';
 	}
 	else {
@@ -225,11 +225,11 @@ function genTable(word,strpho, baseTrans, webTrans)
 		encodeURIComponent(word) +
 		'&keyfrom=chrome.extension' +
 		lan +
-		'" title="查看完整释义" class="ydd-sp ydd-icon" style="padding:0px 0px 0px 0px;padding-top:17px;" target=_blank></a> <a href="http://dict.youdao.com/search?q=' +
+		'" title="鏌ョ湅瀹屾暣閲婁箟" class="ydd-sp ydd-icon" style="padding:0px 0px 0px 0px;padding-top:17px;" target=_blank></a> <a href="http://dict.youdao.com/search?q=' +
 		encodeURIComponent(word) +
 		'&keyfrom=chrome.extension' +
 		lan +
-		'" target=_blank title="查看完整释义" id="yddKeyTitle">' +
+		'" target=_blank title="鏌ョ湅瀹屾暣閲婁箟" id="yddKeyTitle">' +
 		title +
 		'</a>&nbsp;<span style="font-weight:normal;font-size:10px;">' +
 		strpho +
@@ -239,13 +239,13 @@ function genTable(word,strpho, baseTrans, webTrans)
 		encodeURIComponent(word) +
 		'&keyfrom=chrome.extension' +
 		lan +
-		'" target=_blank>详细</a>&nbsp;&nbsp;&nbsp;&nbsp;<a id="wordreaper_holin_info" class="' + encodeURIComponent(word) + '" href="javascript:;"  target=_self>保存</a></span><a id="test"><span class="ydd-sp ydd-close">X</span></a></div></div>' +
+		'" target=_blank>璇︾粏</a>&nbsp;&nbsp;&nbsp;&nbsp;<a id="wordreaper_holin_info" class="' + encodeURIComponent(word) + '" href="javascript:;"  target=_self>淇濆瓨</a></span><a id="test"><span class="ydd-sp ydd-close">X</span></a></div></div>' +
 		'    <div id="yddMiddle">';
 	}
 	if (noBaseTrans == false) {
 		var base=
 			 '  <div class="ydd-trans-wrapper" style="display:block;padding:0px 0px 0px 0px" id="yddSimpleTrans">' +
-			 '        <div class="ydd-tabs"><span class="ydd-tab">基本翻译</span></div>' +
+			 '        <div class="ydd-tabs"><span class="ydd-tab">鍩烘湰缈昏瘧</span></div>' +
 			 '        %s'+
 			 '	</div>' ;
 	    base = sprintf(base,baseTrans);
@@ -254,14 +254,14 @@ function genTable(word,strpho, baseTrans, webTrans)
 	if (noWebTrans == false) {
 		var web=
 			'       <div class="ydd-trans-wrapper" style="display:block;padding:0px 0px 0px 0px">' +
-			'        <div class="ydd-tabs"><span class="ydd-tab">网络释义</span></div>' +
+			'        <div class="ydd-tabs"><span class="ydd-tab">缃戠粶閲婁箟</span></div>' +
 			'        %s' +
 			'      </div>';
 		web = sprintf(web, webTrans);
 		fmt+=web;
 	}
 	if (noBaseTrans && noWebTrans) {
-		fmt += '&nbsp;&nbsp;没有英汉互译结果<br/>&nbsp;&nbsp;<a href="http://www.youdao.com/search?q=' + encodeURIComponent(word) + '&ue=utf8&keyfrom=chrome.extension" target=_blank>请尝试网页搜索</a>';
+		fmt += '&nbsp;&nbsp;娌℃湁鑻辨眽浜掕瘧缁撴灉<br/>&nbsp;&nbsp;<a href="http://www.youdao.com/search?q=' + encodeURIComponent(word) + '&ue=utf8&keyfrom=chrome.extension" target=_blank>璇峰皾璇曠綉椤垫悳绱�</a>';
 	}
 	fmt +=  '   </div>' +
 			'  </div>';
@@ -278,7 +278,7 @@ var noWebTrans = false;
 var speach='';	
 function translateXML(xmlnode)
 {
-	var translate = "<strong>查询:</strong><br/>";
+	var translate = "<strong>鏌ヨ:</strong><br/>";
 	var root = xmlnode.getElementsByTagName("yodaodict")[0];
 	
 	if(""+ root.getElementsByTagName("return-phrase")[0].childNodes[0] != "undefined" )
@@ -372,7 +372,7 @@ function translateTransXML(xmlnode)
 	if(trans_str_tmp == input_str_tmp) return null;
 	
 	var res  ='<div id="yddContainer" align=left style="padding:0px 0px 0px 0px;" >'+
-			'    <div id="yddTop" class="ydd-sp"><div id="yddTopBorderlr"><a href="http://fanyi.youdao.com/translate?i='+encodeURIComponent(input_str)+'&keyfrom=chrome" class="ydd-sp ydd-icon" style="padding:0px 0px 0px 0px;padding-top:17px;" target=_blank">有道词典</a><div style="font-weight:normal;display: inline;">'+input_str_tmp+'</div><span style="float:right;font-weight:normal;font-size:10px"><a href="http://fanyi.youdao.com/translate?i='+encodeURIComponent(input_str)+'&smartresult=dict&keyfrom=chrome.extension" target=_blank>详细</a></span><a id="test"><span class="ydd-sp ydd-close">X</span></a></div></div>'+
+			'    <div id="yddTop" class="ydd-sp"><div id="yddTopBorderlr"><a href="http://fanyi.youdao.com/translate?i='+encodeURIComponent(input_str)+'&keyfrom=chrome" class="ydd-sp ydd-icon" style="padding:0px 0px 0px 0px;padding-top:17px;" target=_blank">鏈夐亾璇嶅吀</a><div style="font-weight:normal;display: inline;">'+input_str_tmp+'</div><span style="float:right;font-weight:normal;font-size:10px"><a href="http://fanyi.youdao.com/translate?i='+encodeURIComponent(input_str)+'&smartresult=dict&keyfrom=chrome.extension" target=_blank>璇︾粏</a></span><a id="test"><span class="ydd-sp ydd-close">X</span></a></div></div>'+
 			'    <div id="yddMiddle">'+
 			'      <div class="ydd-trans-wrapper" id="yddSimpleTrans">'+
 			'        <div class="ydd-trans-container ydd-padding010">'+trans_str+'</div>'+
