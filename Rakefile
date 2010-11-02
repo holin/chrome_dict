@@ -12,3 +12,10 @@ task :build do
     :ignoredir  => /\.git/
   )
 end
+
+desc 'install extension'
+task :install => [:build] do
+  system("chromium-browser  #{File.join(File.dirname(__FILE__),'chrome_dict.crx')}") || \
+    system("chromium-bin #{File.join(File.dirname(__FILE__),'chrome_dict.crx')}") || \
+    system("chromium #{File.join(File.dirname(__FILE__),'chrome_dict.crx')}")
+end
