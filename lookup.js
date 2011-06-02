@@ -352,6 +352,7 @@ function createPopUp(word,senctence, x, y, screenX, screenY) {
 }
 
 function insertaudio(a, query, action, type){  
+	return ""
 return  '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="15px" height="15px" align="absmiddle" id="speach_flash">' +'<param name="allowScriptAccess" value="sameDomain" />' +'<param name="movie" value="http://cidian.youdao.com/chromeplus/voice.swf" />' +'<param name="loop" value="false" />' +'<param name="menu" value="false" />' +'<param name="quality" value="high" />' +'<param name="wmode"  value="transparent">'+'<param name="FlashVars" value="audio=' + a + '">' +'<embed wmode="transparent" src="http://cidian.youdao.com/chromeplus/voice.swf" loop="false" menu="false" quality="high" bgcolor="#ffffff" width="15" height="15" align="absmiddle" allowScriptAccess="sameDomain" FlashVars="audio=' + a + '" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />' +'</object>' ;
 }
 var isDrag =false;
